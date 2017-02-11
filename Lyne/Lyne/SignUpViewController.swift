@@ -8,12 +8,16 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var number: UITextField!
+    
+    var ref: FIRDatabaseReference!
     
     @IBAction func tappedScreen(_ sender: Any) {
         email.resignFirstResponder()
@@ -24,8 +28,14 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        FIRAuth.auth()!.addStateDidChangeListener() { auth, user in
+            // 2
+            if user != nil {
+                // 3
+                self.performSegue(withIdentifier: "signin", sender: self)
+            }
+        }        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,9 +46,13 @@ class SignUpViewController: UIViewController {
 
     @IBAction func signUp(_ sender: Any) {
         
-        FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
-            // ...
-        }
+        FIRAuth.auth()?.createUser(withEmail: email.text!, password: number.text!, completion: {(user, error) in
+            self.ref = FIRDatabase.database().reference().child("users").child("\(self.number.text!)")
+            self.ref.setValue(["email": self.email.text!, "name": self.name.text!, "number":self.number.text!])
+            self.performSegue(withIdentifier: "signin", sender: self)
+        
+        })
+        
     }
     /*
     // MARK: - Navigation

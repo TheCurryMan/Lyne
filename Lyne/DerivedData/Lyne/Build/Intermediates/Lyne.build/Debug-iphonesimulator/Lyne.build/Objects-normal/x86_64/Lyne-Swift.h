@@ -155,18 +155,23 @@ SWIFT_CLASS("_TtC4Lyne19LoginViewController")
 - (IBAction)tappedScreen:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)login:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class FIRDatabaseReference;
 
 SWIFT_CLASS("_TtC4Lyne20SignUpViewController")
 @interface SignUpViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified email;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified name;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified number;
+@property (nonatomic, strong) FIRDatabaseReference * _Null_unspecified ref;
 - (IBAction)tappedScreen:(id _Nonnull)sender;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)signUp:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

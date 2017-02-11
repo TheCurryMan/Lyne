@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -29,6 +31,12 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func login(_ sender: Any) {
+        FIRAuth.auth()?.signIn(withEmail: name.text!, password: number.text!, completion: {(user,error) in
+        
+            self.performSegue(withIdentifier: "login", sender: self)
+        })
+    }
 
     /*
     // MARK: - Navigation

@@ -21,6 +21,7 @@
 		E108A91A1E4F0E14002EA51B /* cancel (1).png in Resources */ = {isa = PBXBuildFile; fileRef = E108A9191E4F0E14002EA51B /* cancel (1).png */; };
 		E108A91D1E4F0E91002EA51B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A91C1E4F0E91002EA51B /* SignUpViewController.swift */; };
 		E108A9211E4F0FB2002EA51B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A9201E4F0FB2002EA51B /* LoginViewController.swift */; };
+		E108A9231E4F1C39002EA51B /* LineSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E108A9221E4F1C39002EA51B /* LineSearchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		E108A9191E4F0E14002EA51B /* cancel (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel (1).png"; sourceTree = "<group>"; };
 		E108A91C1E4F0E91002EA51B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E108A9201E4F0FB2002EA51B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E108A9221E4F1C39002EA51B /* LineSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineSearchTableViewCell.xib; sourceTree = "<group>"; };
 		F30BD3E9517B90B4A1AC391B /* Pods_Lyne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lyne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				E108A8ED1E4F0806002EA51B /* Main.storyboard */,
+				E108A9221E4F1C39002EA51B /* LineSearchTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E108A91A1E4F0E14002EA51B /* cancel (1).png in Resources */,
+				E108A9231E4F1C39002EA51B /* LineSearchTableViewCell.xib in Resources */,
 				E108A9181E4F0C83002EA51B /* GoogleService-Info.plist in Resources */,
 				E108A8F41E4F0806002EA51B /* LaunchScreen.storyboard in Resources */,
 				E108A8F11E4F0806002EA51B /* Assets.xcassets in Resources */,

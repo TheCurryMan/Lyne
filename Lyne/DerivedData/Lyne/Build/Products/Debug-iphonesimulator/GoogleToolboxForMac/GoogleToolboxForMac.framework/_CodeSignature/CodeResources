@@ -4,17 +4,37 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/GTMDebugSelectorValidation.h</key>
+		<data>
+		yfFYPOPpaBdY8vc/cRFoebhncQU=
+		</data>
+		<key>Headers/GTMDebugThreadValidation.h</key>
+		<data>
+		vIO/YX4xZEN9pA62QSiGJis98fo=
+		</data>
 		<key>Headers/GTMDefines.h</key>
 		<data>
 		oO+giRW9VD/2Z5pDkOwV0h/FgCA=
+		</data>
+		<key>Headers/GTMMethodCheck.h</key>
+		<data>
+		TVsdzuIPq74vWNS9GazJnMRLZrg=
 		</data>
 		<key>Headers/GTMNSData+zlib.h</key>
 		<data>
 		bW3suQNZe07zvU+oNCAsxhcP0YY=
 		</data>
+		<key>Headers/GTMNSDictionary+URLArguments.h</key>
+		<data>
+		obZBDmGRAANbJjr+yJ9Y8vQUndU=
+		</data>
+		<key>Headers/GTMNSString+URLArguments.h</key>
+		<data>
+		FJPiYCWjVfZ1uk6TQLNLvkKiDKM=
+		</data>
 		<key>Headers/GoogleToolboxForMac-umbrella.h</key>
 		<data>
-		CXNq3OjxYp4dsMOCpgHVnGua9lI=
+		WweWnQO0yIz+7CMzk0usJDJ2zhQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -27,6 +47,28 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/GTMDebugSelectorValidation.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yfFYPOPpaBdY8vc/cRFoebhncQU=
+			</data>
+			<key>hash2</key>
+			<data>
+			lWXRkssqInvJBlyR1pWrpxyy9yLC962eD5mzp9MWj0c=
+			</data>
+		</dict>
+		<key>Headers/GTMDebugThreadValidation.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vIO/YX4xZEN9pA62QSiGJis98fo=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ohv83hOtd++FIOxXJVflVfabwpYKtJbVIFwQNzu/wig=
+			</data>
+		</dict>
 		<key>Headers/GTMDefines.h</key>
 		<dict>
 			<key>hash</key>
@@ -36,6 +78,17 @@
 			<key>hash2</key>
 			<data>
 			h+k8C99JdcLwLHCKjSFTQ1XWYA+mcSF4sv6rI5YjTPU=
+			</data>
+		</dict>
+		<key>Headers/GTMMethodCheck.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TVsdzuIPq74vWNS9GazJnMRLZrg=
+			</data>
+			<key>hash2</key>
+			<data>
+			dINaOQkNn5zMmCXnIMGGndmVqhKENUQ0W+3pOv7AVsA=
 			</data>
 		</dict>
 		<key>Headers/GTMNSData+zlib.h</key>
@@ -49,15 +102,37 @@
 			YCfZJplNQnGCtAZ14tHbSw0SZAA0jOJ+f72i5dM010Y=
 			</data>
 		</dict>
+		<key>Headers/GTMNSDictionary+URLArguments.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			obZBDmGRAANbJjr+yJ9Y8vQUndU=
+			</data>
+			<key>hash2</key>
+			<data>
+			I+QiK4fwgowsUFGpO99fpnlzoFK9VhGZOoigV4B7/Xs=
+			</data>
+		</dict>
+		<key>Headers/GTMNSString+URLArguments.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FJPiYCWjVfZ1uk6TQLNLvkKiDKM=
+			</data>
+			<key>hash2</key>
+			<data>
+			fCWJyTLpOEdYQ2InR8wI777hQu/IrSeiDYecd3xpu/8=
+			</data>
+		</dict>
 		<key>Headers/GoogleToolboxForMac-umbrella.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CXNq3OjxYp4dsMOCpgHVnGua9lI=
+			WweWnQO0yIz+7CMzk0usJDJ2zhQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			RNO+eAk7y6p3EZ/+SSAo/p55OzvitcYSPDoYBR9MW+A=
+			diCpDWfieXcXr7K+jIUA2NQmyOLNXSpLwMycqFKkFUU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

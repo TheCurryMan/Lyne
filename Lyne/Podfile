@@ -8,6 +8,7 @@ target 'Lyne' do
   # Pods for Lyne
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   target 'LyneTests' do
     inherit! :search_paths
