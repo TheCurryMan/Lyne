@@ -6,18 +6,18 @@ provides-nominal:
 provides-member:
 - ["C4Lyne19LoginViewController", ""]
 provides-dynamic-lookup:
-- "number"
-- "viewDidLoad"
-- "didReceiveMemoryWarning"
+- "tappedScreen"
 - "login"
 - "name"
-- "tappedScreen"
+- "viewDidLoad"
+- "number"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- !private "StringLiteralType"
-- "UITextField"
-- "UIViewController"
 - "LoginViewController"
+- "UIViewController"
 - !private "FIRAuth"
+- "UITextField"
+- !private "StringLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "FIRAuth"]
 - !private ["Ps9AnyObject", "auth"]

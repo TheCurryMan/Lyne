@@ -29,6 +29,9 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         FIRAuth.auth()!.addStateDidChangeListener() { auth, user in
             // 2
             if user != nil {
@@ -49,6 +52,8 @@ class SignUpViewController: UIViewController {
         FIRAuth.auth()?.createUser(withEmail: email.text!, password: number.text!, completion: {(user, error) in
             self.ref = FIRDatabase.database().reference().child("users").child("\(self.number.text!)")
             self.ref.setValue(["email": self.email.text!, "name": self.name.text!, "number":self.number.text!])
+            UserDefaults.standard.set(self.number.text!, forKey: "number")
+            UserDefaults.standard.synchronize()
             self.performSegue(withIdentifier: "signin", sender: self)
         
         })

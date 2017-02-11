@@ -116,6 +116,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -135,14 +136,39 @@ SWIFT_CLASS("_TtC4Lyne11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class FIRDatabaseReference;
+@class UITableView;
+@class UITableViewCell;
+@class UISearchBar;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC4Lyne18HomeViewController")
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController <UITableViewDataSource>
+@property (nonatomic, weak) IBOutlet UISearchBar * _Null_unspecified searchBar;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+@property (nonatomic, strong) FIRDatabaseReference * _Null_unspecified ref;
 - (void)viewDidLoad;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UILabel;
+
+SWIFT_CLASS("_TtC4Lyne23LineSearchTableViewCell")
+@interface LineSearchTableViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lineCode;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lineName;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lineAddress;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lineETA;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lineCount;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified lineBGView;
+@property (nonatomic, strong) FIRDatabaseReference * _Null_unspecified ref;
+- (IBAction)addLine:(id _Nonnull)sender;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -160,7 +186,6 @@ SWIFT_CLASS("_TtC4Lyne19LoginViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class FIRDatabaseReference;
 
 SWIFT_CLASS("_TtC4Lyne20SignUpViewController")
 @interface SignUpViewController : UIViewController
@@ -170,6 +195,7 @@ SWIFT_CLASS("_TtC4Lyne20SignUpViewController")
 @property (nonatomic, strong) FIRDatabaseReference * _Null_unspecified ref;
 - (IBAction)tappedScreen:(id _Nonnull)sender;
 - (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (IBAction)signUp:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

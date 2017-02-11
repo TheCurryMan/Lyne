@@ -22,6 +22,7 @@
 		E108A91D1E4F0E91002EA51B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A91C1E4F0E91002EA51B /* SignUpViewController.swift */; };
 		E108A9211E4F0FB2002EA51B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A9201E4F0FB2002EA51B /* LoginViewController.swift */; };
 		E108A9231E4F1C39002EA51B /* LineSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E108A9221E4F1C39002EA51B /* LineSearchTableViewCell.xib */; };
+		E108A9251E4F771D002EA51B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A9241E4F771D002EA51B /* Line.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		E108A91C1E4F0E91002EA51B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E108A9201E4F0FB2002EA51B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E108A9221E4F1C39002EA51B /* LineSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineSearchTableViewCell.xib; sourceTree = "<group>"; };
+		E108A9241E4F771D002EA51B /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		F30BD3E9517B90B4A1AC391B /* Pods_Lyne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lyne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				E108A8E91E4F0806002EA51B /* AppDelegate.swift */,
+				E108A9261E4F7723002EA51B /* Models */,
 				E108A91F1E4F0EAA002EA51B /* Views */,
 				E108A91E1E4F0EA2002EA51B /* Controllers */,
 				E108A91B1E4F0E1B002EA51B /* Assets */,
@@ -202,6 +205,14 @@
 				E108A9221E4F1C39002EA51B /* LineSearchTableViewCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		E108A9261E4F7723002EA51B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E108A9241E4F771D002EA51B /* Line.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,6 +506,7 @@
 				E108A91D1E4F0E91002EA51B /* SignUpViewController.swift in Sources */,
 				E108A8EC1E4F0806002EA51B /* HomeViewController.swift in Sources */,
 				E108A8EA1E4F0806002EA51B /* AppDelegate.swift in Sources */,
+				E108A9251E4F771D002EA51B /* Line.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
