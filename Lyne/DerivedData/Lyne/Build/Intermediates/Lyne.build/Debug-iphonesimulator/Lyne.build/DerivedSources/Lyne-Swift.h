@@ -136,21 +136,39 @@ SWIFT_CLASS("_TtC4Lyne11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class FIRDatabaseReference;
-@class UITableView;
-@class UITableViewCell;
-@class UISearchBar;
 @class UILabel;
-@class NSBundle;
 @class NSCoder;
 
+SWIFT_CLASS("_TtC4Lyne25CurrentLinesTableViewCell")
+@interface CurrentLinesTableViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentLineCode;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentLineName;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentLineAddress;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentLinePosition;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currentLineETA;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified backgroundLabel;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class FIRDatabaseReference;
+@class UISearchBar;
+@class UITableView;
+@class NSBundle;
+
 SWIFT_CLASS("_TtC4Lyne18HomeViewController")
-@interface HomeViewController : UIViewController <UITableViewDataSource>
+@interface HomeViewController : UIViewController <UIBarPositioningDelegate, UISearchBarDelegate, UITableViewDataSource>
 @property (nonatomic, weak) IBOutlet UISearchBar * _Null_unspecified searchBar;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified emptyLabel;
 @property (nonatomic, strong) FIRDatabaseReference * _Null_unspecified ref;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull curLinesString;
+@property (nonatomic) BOOL isSearching;
 - (void)viewDidLoad;
+- (void)searchBarTextDidBeginEditing:(UISearchBar * _Nonnull)searchBar;
+- (void)searchBarTextDidEndEditing:(UISearchBar * _Nonnull)searchBar;
+- (void)getUserData;
+- (void)getCurrentLines;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)didReceiveMemoryWarning;

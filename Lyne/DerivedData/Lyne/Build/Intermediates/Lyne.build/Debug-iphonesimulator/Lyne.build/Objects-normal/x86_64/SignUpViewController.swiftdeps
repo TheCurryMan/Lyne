@@ -6,28 +6,28 @@ provides-nominal:
 provides-member:
 - ["C4Lyne20SignUpViewController", ""]
 provides-dynamic-lookup:
-- "viewDidAppear"
 - "viewDidLoad"
+- "ref"
+- "name"
+- "email"
+- "tappedScreen"
+- "signUp"
 - "number"
 - "didReceiveMemoryWarning"
-- "tappedScreen"
-- "ref"
-- "email"
-- "name"
-- "signUp"
+- "viewDidAppear"
 depends-top-level:
+- !private "!="
+- "UIViewController"
+- !private "FIRDatabase"
 - !private "AssignmentPrecedence"
+- !private "FIRAuth"
 - !private "UserDefaults"
 - "SignUpViewController"
-- "UITextField"
-- !private "FIRDatabase"
-- "Bool"
-- "Dictionary"
-- !private "!="
 - "FIRDatabaseReference"
+- "Bool"
 - "StringLiteralType"
-- !private "FIRAuth"
-- "UIViewController"
+- "Dictionary"
+- "UITextField"
 depends-member:
 - !private ["Ps9AnyObject", "FIRAuth"]
 - !private ["Ps9AnyObject", "FIRDatabase"]

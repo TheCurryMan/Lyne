@@ -49,7 +49,7 @@ class LineSearchTableViewCell: UITableViewCell {
                 linesFinal.append(self.lineCode.text!)
                 self.ref.child("users/\(UserDefaults.standard.value(forKey: "number") as! String)/lines").setValue(linesFinal)
             } else {
-                var lines = [UserDefaults.standard.value(forKey: "number") as! String]
+                var lines = ["\(self.lineCode.text!)"]
                 self.ref.child("users/\(UserDefaults.standard.value(forKey: "number") as! String)/lines").setValue(lines)
             }
             
@@ -62,8 +62,19 @@ class LineSearchTableViewCell: UITableViewCell {
     }
 }
 
+class CurrentLinesTableViewCell:UITableViewCell {
 
-class HomeViewController: UIViewController, UITableViewDataSource {
+    @IBOutlet weak var currentLineCode: UILabel!
+    @IBOutlet weak var currentLineName: UILabel!
+    @IBOutlet weak var currentLineAddress: UILabel!
+    @IBOutlet weak var currentLinePosition: UILabel!
+    @IBOutlet weak var currentLineETA: UILabel!
+    @IBOutlet weak var backgroundLabel: UILabel!
+    
+}
+
+
+class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -71,13 +82,16 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     var ref: FIRDatabaseReference!
     
     var lines = [Line]()
-    
+    var currentLines = [Line]()
+    var curLinesString = [String]()
+    var isSearching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.register(UINib(nibName: "LineSearchTableViewCell", bundle: nil), forCellReuseIdentifier: "line")
+        tableView.register(UINib(nibName: "CurrentLinesTableViewCell", bundle: nil), forCellReuseIdentifier: "current")
         self.ref = FIRDatabase.database().reference().child("lines")
         
         var refHandle = ref.observe(FIRDataEventType.value, with: { (snapshot) in
@@ -93,13 +107,53 @@ class HomeViewController: UIViewController, UITableViewDataSource {
                 line.eta = data["eta"] as! Int
                 line.name = data["name"] as! String
                 self.lines.append(line)
+                self.getUserData()
             }
             self.tableView.reloadData()
         })
-        
-        
+    }
+    
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.isSearching = true
+        self.tableView.reloadData()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        self.isSearching = false
+        self.tableView.reloadData()
+    }
+    
+    func getUserData(){
+        self.ref = FIRDatabase.database().reference().child("users").child(UserDefaults.standard.value(forKey: "number") as! String)
+        var refHandles = ref.observe(FIRDataEventType.value, with: { (snapshot) in
+            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            if let curString = postDict["lines"] as? [String] {
+                self.curLinesString = curString
+                self.emptyLabel.isHidden = true
+                self.getCurrentLines()
+            } else {
+                self.emptyLabel.isHidden = false
+            }
+            
+        })
+    }
+    
+    func getCurrentLines(){
+        currentLines.removeAll()
+        for i in curLinesString {
+            for j in lines {
+                if i == j.code {
+                    currentLines.append(j)
+                    
+                }
+            }
+        }
+        self.tableView.reloadData()
     }
 
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if lines.count > 0 {
             emptyLabel.isHidden = true
@@ -107,30 +161,53 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         } else {
             emptyLabel.isHidden = false
         }
-        return lines.count
+        if (isSearching) {
+            return lines.count
+        } else {
+            return currentLines.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "line", for: indexPath) as! LineSearchTableViewCell
-        cell.selectionStyle = .none
-        let line = lines[indexPath.row]
-        cell.lineCode.text = line.code
-        if line.count > 3
-        {
-            cell.lineETA.text = "ETA: " + String(line.eta * (line.count - 3)) + " min."
-        } else
-        {
-            cell.lineETA.text = "ETA: 0 min."
+        if (isSearching) {
+            var cell = tableView.dequeueReusableCell(withIdentifier: "line", for: indexPath) as! LineSearchTableViewCell
+            cell.selectionStyle = .none
+            let line = lines[indexPath.row]
+            cell.lineCode.text = line.code
+            if line.count > 3
+            {
+                cell.lineETA.text = "ETA: " + String(line.eta * (line.count - 3)) + " min."
+            } else
+            {
+                cell.lineETA.text = "ETA: 0 min."
+            }
+        
+            cell.lineName.text = line.name
+            cell.lineCount.text = String(line.count)
+            cell.lineBGView.layer.cornerRadius = 10
+            cell.lineAddress.text = line.address
+            return cell
+        } else {
+            var cell = tableView.dequeueReusableCell(withIdentifier: "current", for: indexPath) as! CurrentLinesTableViewCell
+            cell.selectionStyle = .none
+            let line = currentLines[indexPath.row]
+            cell.currentLineCode.text = line.code
+            if line.count > 3
+            {
+                cell.currentLineETA.text = "ETA: " + String(line.eta * (line.count - 3)) + " min."
+            } else
+            {
+                cell.currentLineETA.text = "ETA: 0 min."
+            }
+            
+            cell.currentLineName.text = line.name
+            cell.currentLinePosition.text = String(line.count)
+            cell.backgroundLabel.layer.cornerRadius = 10
+            cell.currentLineAddress.text = line.address
+            return cell
         }
         
-        cell.lineName.text = line.name
-        cell.lineCount.text = String(line.count)
-        cell.lineBGView.layer.cornerRadius = 10
-        cell.lineAddress.text = line.address
-        return cell
-
     }
-
     
     
     override func didReceiveMemoryWarning() {
