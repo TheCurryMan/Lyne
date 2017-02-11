@@ -152,21 +152,27 @@ SWIFT_CLASS("_TtC4Lyne25CurrentLinesTableViewCell")
 @end
 
 @class FIRDatabaseReference;
+@class UISearchController;
 @class UISearchBar;
 @class UITableView;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC4Lyne18HomeViewController")
-@interface HomeViewController : UIViewController <UIBarPositioningDelegate, UISearchBarDelegate, UITableViewDataSource>
+@interface HomeViewController : UIViewController <UIBarPositioningDelegate, UISearchBarDelegate, UISearchResultsUpdating, UITableViewDataSource>
 @property (nonatomic, weak) IBOutlet UISearchBar * _Null_unspecified searchBar;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified emptyLabel;
 @property (nonatomic, strong) FIRDatabaseReference * _Null_unspecified ref;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull curLinesString;
 @property (nonatomic) BOOL isSearching;
+@property (nonatomic, readonly, strong) UISearchController * _Nonnull searchController;
 - (void)viewDidLoad;
 - (void)searchBarTextDidBeginEditing:(UISearchBar * _Nonnull)searchBar;
 - (void)searchBarTextDidEndEditing:(UISearchBar * _Nonnull)searchBar;
+- (void)searchBarSearchButtonClicked:(UISearchBar * _Nonnull)searchBar;
+- (void)searchBarCancelButtonClicked:(UISearchBar * _Nonnull)searchBar;
+- (void)updateSearchResultsForSearchController:(UISearchController * _Nonnull)searchController;
+- (void)filterContentForSearchTextWithSearchText:(NSString * _Nonnull)searchText scope:(NSString * _Nonnull)scope;
 - (void)getUserData;
 - (void)getCurrentLines;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;

@@ -74,7 +74,7 @@ class CurrentLinesTableViewCell:UITableViewCell {
 }
 
 
-class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate, UISearchResultsUpdating {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -82,9 +82,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
     var ref: FIRDatabaseReference!
     
     var lines = [Line]()
+    var filteredLines = [Line]()
     var currentLines = [Line]()
     var curLinesString = [String]()
     var isSearching = false
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +99,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         var refHandle = ref.observe(FIRDataEventType.value, with: { (snapshot) in
             let postDict = snapshot.value as? [String : AnyObject] ?? [:]
             self.lines.removeAll()
+            self.currentLines.removeAll()
             for i in postDict{
                 var data = i.value as! NSDictionary
                 var line = Line()
@@ -111,18 +114,61 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
             }
             self.tableView.reloadData()
         })
+        searchController.dimsBackgroundDuringPresentation = false;
+        searchController.searchResultsUpdater = self
+        searchController.dismiss(animated: false, completion: nil)
+        tableView.tableHeaderView = searchController.searchBar
     }
     
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.isSearching = true
         self.tableView.reloadData()
+        //self.searchBar.setShowsCancelButton(true, animated: true)
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         self.isSearching = false
         self.tableView.reloadData()
+        //self.searchBar.setShowsCancelButton(false, animated: true)
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        //self.isSearching = false
+        self.tableView.reloadData()
+        //self.searchBar.setShowsCancelButton(false, animated: true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        if searchBar == self.searchController.searchBar {
+            print("NAMASTE")
+        }
+        //self.searchBar.resignFirstResponder()
+        self.isSearching = false
+        self.tableView.reloadData()
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
+    }
+    
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        self.isSearching = true
+        filteredLines = lines.filter{line in
+            return (line.code?.lowercased().contains(searchText.lowercased()))!
+        }
+        if searchText == "" {
+            filteredLines = lines
+        }
+        
+        if (searchController.isActive == false) && (searchText == "" ){
+            isSearching = false
+        }
+        
+        tableView.reloadData()
+    }
+    
+
     
     func getUserData(){
         self.ref = FIRDatabase.database().reference().child("users").child(UserDefaults.standard.value(forKey: "number") as! String)
@@ -155,14 +201,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if lines.count > 0 {
+        if currentLines.count > 0 {
             emptyLabel.isHidden = true
             
         } else {
             emptyLabel.isHidden = false
         }
         if (isSearching) {
-            return lines.count
+            return filteredLines.count
         } else {
             return currentLines.count
         }
@@ -172,7 +218,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         if (isSearching) {
             var cell = tableView.dequeueReusableCell(withIdentifier: "line", for: indexPath) as! LineSearchTableViewCell
             cell.selectionStyle = .none
-            let line = lines[indexPath.row]
+            let line = filteredLines[indexPath.row]
             cell.lineCode.text = line.code
             if line.count > 3
             {
@@ -209,6 +255,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         
     }
     
+   
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
