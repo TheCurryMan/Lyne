@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		DO1wOtaGR1gw3Q3neOs67vR2Cz8=
+		miz/MmGVjxsoc1hEV68KlVY46w4=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -14,39 +14,43 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		HK0bI5zzBz1QXFuPIm8sL3BcKGQ=
+		HKrVOymi1fzK0cYC1Wi+gS8pFCc=
 		</data>
 		<key>Base.lproj/Main.storyboardc/IEm-jq-3tW-view-X2U-3j-6M9.nib</key>
 		<data>
-		RkpF+wevLr7dWLJM0BptOGOVRnk=
+		hEFGlqGArfwd5VIf4LTL/yaefFc=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		Sa6JFsj0Bf1Wbowd0XQyIU3zqJg=
+		AkQjlmvjejBImfjisEfm80a5LgY=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-IEm-jq-3tW.nib</key>
 		<data>
-		zEn4LtHVNXEHIMAX2wC6agvDv90=
+		0xLTO8wZgsLzzoyJD2mrKIJk/8g=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-hC4-nx-x1v.nib</key>
 		<data>
-		gqN2EJ37r4ruQ5MRsxLy9tQ1dU8=
+		GmpNb40oqVE+MY+0JYIMBFBtojM=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-yYQ-oZ-CwF.nib</key>
 		<data>
-		GQ1xT0NWqcrqXoLtgVM05VjzKHE=
+		FX2LOwLlPSdD9oRkgZWno8zpOn8=
 		</data>
 		<key>Base.lproj/Main.storyboardc/hC4-nx-x1v-view-Ou9-B7-8nh.nib</key>
 		<data>
-		1na4qDLZmat8FsNs/Y8+W9le13o=
+		JQD0q6YnY2JtkxsaayzIwgf9bh4=
 		</data>
 		<key>Base.lproj/Main.storyboardc/yYQ-oZ-CwF-view-Cfv-S5-a6V.nib</key>
 		<data>
-		trcA6nntL8g9hqw0GaSfkEmqsq0=
+		VlGIgn2QaBGlvoE2UAh4lDVh5Oo=
+		</data>
+		<key>CurrentLinesTableViewCell.nib</key>
+		<data>
+		1KMZ46mMeP7cyPvGUwluePN3adw=
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher</key>
 		<data>
-		dtkcu1Pg5B8nDqALQ8UYeF0q8MM=
+		zjhUMg31GRG2SGbocIY/W+Ad7gE=
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
 		<data>
@@ -58,7 +62,7 @@
 		</data>
 		<key>Frameworks/GoogleToolboxForMac.framework/GoogleToolboxForMac</key>
 		<data>
-		oYy1dcHp3hfHme8SuozLsuJvu0A=
+		sTEqaSdLwbMyeo3Bymkhr0aOHAg=
 		</data>
 		<key>Frameworks/GoogleToolboxForMac.framework/Info.plist</key>
 		<data>
@@ -118,7 +122,7 @@
 		</data>
 		<key>LineSearchTableViewCell.nib</key>
 		<data>
-		zXG+8UojOptBXT8fwAjbx7GvDbo=
+		0/GTfb/oLYe2xFnNZEc56utTMoc=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -139,11 +143,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DO1wOtaGR1gw3Q3neOs67vR2Cz8=
+			miz/MmGVjxsoc1hEV68KlVY46w4=
 			</data>
 			<key>hash2</key>
 			<data>
-			l0j3SWMOkl3jDhPyj2Pcz0YraiRukTVlvGFUGV55b8M=
+			MNznPVsdepVwVB/79ipWDghQ1HciTkEqIY9tbcs7/uU=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -161,99 +165,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HK0bI5zzBz1QXFuPIm8sL3BcKGQ=
+			HKrVOymi1fzK0cYC1Wi+gS8pFCc=
 			</data>
 			<key>hash2</key>
 			<data>
-			mBRhQ6uOMVbj8VsNEZkQkuHWO5faUS6t/010tdi+ee8=
+			AA7s6XPWLEmvuaoESHKf4tPJ0+uF2Hsi05DUiM7tP00=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/IEm-jq-3tW-view-X2U-3j-6M9.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RkpF+wevLr7dWLJM0BptOGOVRnk=
+			hEFGlqGArfwd5VIf4LTL/yaefFc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z6cLBM2zM87INqhqIOOPIrz0GuN5GJRnfqfLbJJce/g=
+			qTZRRAuIl/FYUtr2A/e+JIkYZDVLpkrGyJQ//hVUE6E=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Sa6JFsj0Bf1Wbowd0XQyIU3zqJg=
+			AkQjlmvjejBImfjisEfm80a5LgY=
 			</data>
 			<key>hash2</key>
 			<data>
-			o1akn04dhI1qm8fgSTlsMTpB1Yw6YnCG6TohbNREKbo=
+			+ynunK1Fgy2uMwH4LORrfYMCiZMPoHz+qU8U/etmwAs=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-IEm-jq-3tW.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zEn4LtHVNXEHIMAX2wC6agvDv90=
+			0xLTO8wZgsLzzoyJD2mrKIJk/8g=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZypsVr/tgXUlO9ErPeBXyRZPQTVSDJ9R7I0+B5vNPI4=
+			3IIF3ByHr+r2qwgyRDZ80DQXNkebqnvMy9mMjU78+eo=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-hC4-nx-x1v.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gqN2EJ37r4ruQ5MRsxLy9tQ1dU8=
+			GmpNb40oqVE+MY+0JYIMBFBtojM=
 			</data>
 			<key>hash2</key>
 			<data>
-			FbXRF4AqB/kl2vTvKxMzLIO/ip5qnSrkovBY0uF9Uzw=
+			hB6veuTR99fHSSjIJ47jPHUu/Gv9+pN1q65/FSm9Yf0=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-yYQ-oZ-CwF.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GQ1xT0NWqcrqXoLtgVM05VjzKHE=
+			FX2LOwLlPSdD9oRkgZWno8zpOn8=
 			</data>
 			<key>hash2</key>
 			<data>
-			j1fbFT5cgTLkP7w/gmAOH4uLFiM0e2I62BLPBHQjHII=
+			n0g/aVomEg/8q1cFFh9nNBfkeTfjRyfDZexrQPGaBj4=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/hC4-nx-x1v-view-Ou9-B7-8nh.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1na4qDLZmat8FsNs/Y8+W9le13o=
+			JQD0q6YnY2JtkxsaayzIwgf9bh4=
 			</data>
 			<key>hash2</key>
 			<data>
-			UqEVpk7UsUFtUq4yOrbMwnJGMALvpIrrkaT+Nim+wtk=
+			hn9xZ9jb/r8dG7VNvBrZvvIXGS97XHVebb5Uz/VAEhM=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/yYQ-oZ-CwF-view-Cfv-S5-a6V.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			trcA6nntL8g9hqw0GaSfkEmqsq0=
+			VlGIgn2QaBGlvoE2UAh4lDVh5Oo=
 			</data>
 			<key>hash2</key>
 			<data>
-			R76vY6k5SM2nX3bWN/Xixs4yDEIv4Q4rh1rwKTqygG8=
+			lRkS+af2uBmXCagLGc7Q08Vr8mSE5fNL5e4Wnndq/lM=
+			</data>
+		</dict>
+		<key>CurrentLinesTableViewCell.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1KMZ46mMeP7cyPvGUwluePN3adw=
+			</data>
+			<key>hash2</key>
+			<data>
+			qBTBxOkHuVndu+mfUps0Zi63qekffzjAKWHI8AlXCyk=
 			</data>
 		</dict>
 		<key>Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dtkcu1Pg5B8nDqALQ8UYeF0q8MM=
+			zjhUMg31GRG2SGbocIY/W+Ad7gE=
 			</data>
 			<key>hash2</key>
 			<data>
-			HKX4RorRUakx3doPMq+9EoocZOfIsY2/EQ6fq2DtmMc=
+			B391BYJcvdXqRBVHVWdv7mP/CaKZ5RgcipENrfed6hg=
 			</data>
 		</dict>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
@@ -282,11 +297,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oYy1dcHp3hfHme8SuozLsuJvu0A=
+			sTEqaSdLwbMyeo3Bymkhr0aOHAg=
 			</data>
 			<key>hash2</key>
 			<data>
-			3I3eWxf7qMYyZ68BMa/MIl8FS11bT/jd7WBgMo0NPiw=
+			0GL50tnDzQ/u7TQwZ+CbU4SGP3+CAb6RQiaiQPunUPk=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleToolboxForMac.framework/Info.plist</key>
@@ -436,11 +451,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zXG+8UojOptBXT8fwAjbx7GvDbo=
+			0/GTfb/oLYe2xFnNZEc56utTMoc=
 			</data>
 			<key>hash2</key>
 			<data>
-			JMqfdicjV2ip2EG476dME6bn/NvON2l/Hq6cGkgxPzo=
+			ADI1/2lzh/uUDzPbkvTBhFD5PL7ZylaRMbSj99h/skA=
 			</data>
 		</dict>
 		<key>cancel (1).png</key>

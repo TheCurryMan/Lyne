@@ -67,6 +67,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyLabel: UILabel!
     var ref: FIRDatabaseReference!
     
     var lines = [Line]()
@@ -100,6 +101,12 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if lines.count > 0 {
+            emptyLabel.isHidden = true
+            
+        } else {
+            emptyLabel.isHidden = false
+        }
         return lines.count
     }
     
@@ -108,7 +115,14 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         cell.selectionStyle = .none
         let line = lines[indexPath.row]
         cell.lineCode.text = line.code
-        cell.lineETA.text = "ETA: " + String(line.eta * line.count) + " min."
+        if line.count > 3
+        {
+            cell.lineETA.text = "ETA: " + String(line.eta * (line.count - 3)) + " min."
+        } else
+        {
+            cell.lineETA.text = "ETA: 0 min."
+        }
+        
         cell.lineName.text = line.name
         cell.lineCount.text = String(line.count)
         cell.lineBGView.layer.cornerRadius = 10

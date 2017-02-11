@@ -23,6 +23,7 @@
 		E108A9211E4F0FB2002EA51B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A9201E4F0FB2002EA51B /* LoginViewController.swift */; };
 		E108A9231E4F1C39002EA51B /* LineSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E108A9221E4F1C39002EA51B /* LineSearchTableViewCell.xib */; };
 		E108A9251E4F771D002EA51B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A9241E4F771D002EA51B /* Line.swift */; };
+		E108A9281E4F8A14002EA51B /* CurrentLinesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E108A9271E4F8A14002EA51B /* CurrentLinesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		E108A9201E4F0FB2002EA51B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E108A9221E4F1C39002EA51B /* LineSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineSearchTableViewCell.xib; sourceTree = "<group>"; };
 		E108A9241E4F771D002EA51B /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		E108A9271E4F8A14002EA51B /* CurrentLinesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentLinesTableViewCell.xib; sourceTree = "<group>"; };
 		F30BD3E9517B90B4A1AC391B /* Pods_Lyne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lyne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -203,6 +205,7 @@
 			children = (
 				E108A8ED1E4F0806002EA51B /* Main.storyboard */,
 				E108A9221E4F1C39002EA51B /* LineSearchTableViewCell.xib */,
+				E108A9271E4F8A14002EA51B /* CurrentLinesTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			files = (
 				E108A91A1E4F0E14002EA51B /* cancel (1).png in Resources */,
 				E108A9231E4F1C39002EA51B /* LineSearchTableViewCell.xib in Resources */,
+				E108A9281E4F8A14002EA51B /* CurrentLinesTableViewCell.xib in Resources */,
 				E108A9181E4F0C83002EA51B /* GoogleService-Info.plist in Resources */,
 				E108A8F41E4F0806002EA51B /* LaunchScreen.storyboard in Resources */,
 				E108A8F11E4F0806002EA51B /* Assets.xcassets in Resources */,

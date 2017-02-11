@@ -7,11 +7,11 @@ provides-member:
 - ["C4Lyne4Line", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "IntegerLiteralType"
-- "Int"
 - "FloatLiteralType"
-- "Line"
+- "IntegerLiteralType"
 - "String"
+- "Line"
+- "Int"
 depends-member:
 - ["Ps9AnyObject", ""]
 - ["Si", "deinit"]

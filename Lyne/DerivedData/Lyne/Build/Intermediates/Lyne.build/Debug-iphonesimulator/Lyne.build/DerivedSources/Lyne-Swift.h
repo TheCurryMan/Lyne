@@ -140,6 +140,7 @@ SWIFT_CLASS("_TtC4Lyne11AppDelegate")
 @class UITableView;
 @class UITableViewCell;
 @class UISearchBar;
+@class UILabel;
 @class NSBundle;
 @class NSCoder;
 
@@ -147,6 +148,7 @@ SWIFT_CLASS("_TtC4Lyne18HomeViewController")
 @interface HomeViewController : UIViewController <UITableViewDataSource>
 @property (nonatomic, weak) IBOutlet UISearchBar * _Null_unspecified searchBar;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified emptyLabel;
 @property (nonatomic, strong) FIRDatabaseReference * _Null_unspecified ref;
 - (void)viewDidLoad;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
@@ -156,7 +158,6 @@ SWIFT_CLASS("_TtC4Lyne18HomeViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UILabel;
 
 SWIFT_CLASS("_TtC4Lyne23LineSearchTableViewCell")
 @interface LineSearchTableViewCell : UITableViewCell

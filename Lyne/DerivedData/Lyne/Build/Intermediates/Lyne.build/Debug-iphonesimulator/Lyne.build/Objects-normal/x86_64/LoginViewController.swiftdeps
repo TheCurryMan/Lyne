@@ -6,12 +6,12 @@ provides-nominal:
 provides-member:
 - ["C4Lyne19LoginViewController", ""]
 provides-dynamic-lookup:
-- "tappedScreen"
 - "login"
+- "tappedScreen"
 - "name"
 - "viewDidLoad"
-- "number"
 - "didReceiveMemoryWarning"
+- "number"
 depends-top-level:
 - "LoginViewController"
 - "UIViewController"
