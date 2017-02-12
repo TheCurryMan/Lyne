@@ -150,6 +150,7 @@ function notHere() {
 function next() {
     stop();
     reset();
+    timer();
     counter+=1;
     getTime();
     if(items.length>1)
@@ -199,6 +200,7 @@ function next() {
     
 }
 function init() {
+    add();
     var config = {
         apiKey: "AIzaSyC3OuzXgf_xkhCsvo1saTPzILk6Xi0v1_k",
         authDomain: "lyne.firebaseapp.com",
