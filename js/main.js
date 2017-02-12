@@ -130,7 +130,7 @@ function notHere() {
             }
             else
             {
-                list.insertBefore(temp, item[i]);
+                list.insertBefore(temp, items[i]);
             }
             var arrayelement = arrayLine[0];
             var firsthalf = arrayLine.splice(0, index);
