@@ -105,8 +105,7 @@ function storeInfo(snapshotValue) {
 function getTime(){
     var tied = (event.timeStamp-starttime)/counter;
     tied = tied/1000;
-    var eta = document.getElementById("timer").innerHTML;
-    eta = "ETA: "+tied;
+    document.getElementById("timer").innerHTML = "ETA: "+tied;
     console.log(tied);
 }
 
