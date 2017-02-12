@@ -20,7 +20,7 @@ function init(){
     height = canvas.height - 2 * pad;
     length = width/speed;
     draw();
-    setInterval(draw, 10000)
+    setInterval(draw, 5000)
 }
 
 function draw(time){

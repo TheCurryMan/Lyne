@@ -28,8 +28,9 @@ function line() {
         count: count,
         codename: code
     });
+    sessionStorage.setItem("storecode", code);
     
-    window.location.href="https://lyne-thecurryman.c9users.io/Web/test.html";
+    window.location.href="main.html";
     
     // xhr.open("POST","https://shielded-reef-48843.herokuapp.com/", true);
     // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
