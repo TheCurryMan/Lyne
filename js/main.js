@@ -140,7 +140,7 @@ function next() {
     //if(items.length > 1)
     //{
         var name = items[1].childNodes[0].innerHTML;
-        var number = "+1" + arrayLine[0];
+        var number = arrayLine[0];
         console.log(name);
         console.log(number);
 
