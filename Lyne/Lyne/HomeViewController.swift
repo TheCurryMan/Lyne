@@ -41,12 +41,20 @@ class LineSearchTableViewCell: UITableViewCell {
         
         ref.child("users").child(UserDefaults.standard.value(forKey: "number") as! String).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user valuete
+            var con = true
             let value = snapshot.value as? NSDictionary
             if let lines = value?["lines"] as? [String] {
+                for i in lines {
+                    if i == self.lineCode.text! {
+                        con = false
+                    }
+                }
+                if con {
                 var linesFinal = [String]()
                 linesFinal = lines
                 linesFinal.append(self.lineCode.text!)
                 self.ref.child("users/\(UserDefaults.standard.value(forKey: "number") as! String)/lines").setValue(linesFinal)
+                }
             } else {
                 var lines = ["\(self.lineCode.text!)"]
                 self.ref.child("users/\(UserDefaults.standard.value(forKey: "number") as! String)/lines").setValue(lines)
@@ -235,6 +243,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         }
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (isSearching) {
             var cell = tableView.dequeueReusableCell(withIdentifier: "line", for: indexPath) as! LineSearchTableViewCell
@@ -268,7 +277,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
             }
             
             cell.currentLineName.text = line.name
-            if line.users?.count != 0 {
+            if let user = line.users as! [String]?{
             for (index, element) in line.users!.enumerated() {
                 if UserDefaults.standard.value(forKey: "number") as! String == element {
                     cell.currentLinePosition.text = String(index+1)

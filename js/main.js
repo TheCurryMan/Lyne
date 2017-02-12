@@ -105,8 +105,7 @@ function storeInfo(snapshotValue) {
 function getTime(){
     var tied = (event.timeStamp-starttime)/counter;
     tied = tied/1000;
-    var eta = document.getElementById("timer").innerHTML;
-    eta = "ETA: "+tied;
+    document.getElementById("timer").innerHTML = "ETA: "+tied;
     console.log(tied);
 }
 
@@ -123,6 +122,9 @@ function notHere() {
         {
             temp = items[1].cloneNode(true);
             temp.childNodes[1].innerHTML = items[1].childNodes[1].innerHTML + " ";
+            temp.removeAttribute("id");
+            
+            console.log(temp);
             var index = Math.min(4, items.length);
             if(index == items.length)
             {
@@ -136,12 +138,18 @@ function notHere() {
             var firsthalf = arrayLine.splice(0, index);
             var secondhalf = arrayLine.splice(index, arrayLine.length);
             arrayLine = firsthalf.concat(arrayelement, secondhalf);
+            console.log(firsthalf);
+            console.log(arrayelement);
+            console.log(secondhalf);
+            console.log(arrayLine);
             next();
          }
     }
 }
 
 function next() {
+    stop();
+    reset();
     counter+=1;
     getTime();
     if(items.length>1)
@@ -260,4 +268,43 @@ ctx.stroke();
 
 }
   }
+var h1 = document.getElementsByTagName('h1')[0],
+    //start = document.getElementById('start'),
+   //// stop = document.getElementById('stop'),
+    clear = document.getElementById('clear'),
+    seconds = 0, minutes = 0, hours = 0,
+    t;
+
+function add() {
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+    
+    h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+
+
+/* Start button */
+//start.onclick = timer;
+
+/* Stop button */
+function stop() {
+    clearTimeout(t);
+}
+
+/* Clear button */
+function reset() {
+    h1.textContent = "00:00:00";
+    seconds = 0; minutes = 0; hours = 0;
+}
 init(); 
