@@ -1,6 +1,6 @@
 var arrayLine = [];
 var storecode = window.name;
-console.log(sessionStorage);
+console.log(storecode);
 var list = document.getElementById("line");
 var items = document.getElementsByTagName("li");
 var buffer = 0;
