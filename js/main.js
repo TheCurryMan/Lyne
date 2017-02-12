@@ -105,8 +105,18 @@ function storeInfo(snapshotValue) {
 function getTime(){
     var tied = (event.timeStamp-starttime)/counter;
     tied = tied/1000;
-    document.getElementById("timer").innerHTML = "ETA: "+tied;
-    console.log(tied);
+    if(tied > 60)
+    {
+        tied = tied/60;
+        tied = Math.round(tied * 100) / 100;
+        document.getElementById("eta").innerHTML = "ETA: " + tied + "minute(s)";
+    }
+    else
+    {
+        tied = Math.round(tied * 100) / 100;
+        document.getElementById("eta").innerHTML = "ETA: "+tied + "second(s)";
+    }
+    console.log(document.getElementById("eta"));
 }
 
 function notHere() {
@@ -181,7 +191,7 @@ function next() {
     //{
         var name = items[1].childNodes[0].innerHTML;
         var number = arrayLine[0];
-        var eta = firebase.database().ref('lines/' + storecode).child(eta).value;
+        var eta = firebase.database().ref('lines/' + storecode).child("eta").value;
         console.log(eta);
         console.log(name);
         console.log(number);
@@ -270,7 +280,7 @@ ctx.stroke();
 
 }
   }
-var h1 = document.getElementById('timer')[0],
+var h1 = document.getElementById('timer'),
     //start = document.getElementById('start'),
    //// stop = document.getElementById('stop'),
     clear = document.getElementById('clear'),
