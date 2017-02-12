@@ -9,27 +9,30 @@ function line() {
 
     var eta = document.getElementById("orders").value;
 
-    // var buffer = document.getElementById("buffer").value;
+    var deviation = document.getElementById("deviation").value;
+
+    var lines = document.getElementById("lines").value;ÍÍ
+
+    var buffer = document.getElementById("buffer").value;
 
     var code = document.getElementById("code").value;
     
     console.log("code");
 
     var count = 0;
-    
-    var buffer = count;
 
     var ref = firebase.database().ref("lines");
     ref.child(code).set({
         name: name,
+        deviation: deviation,
         location: location,
-        eta: eta,
+        eta: eta/lines,
         buffer: buffer,
         count: count,
         codename: code
     });
     
-    window.location.href="https://lyne-thecurryman.c9users.io/Web/test.html";
+    window.location.href="http://avinashj.com/main.html";
     
     // xhr.open("POST","https://shielded-reef-48843.herokuapp.com/", true);
     // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

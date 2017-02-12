@@ -29,8 +29,11 @@
                     <input type="text" id="name" placeholder="name" />
                     <input type="text" id="code" placeholder="code" />
                     <input type="text" id="location" placeholder="address" />
-                    <input type="number" id="buffer" placeholder="buffer line size" />
-                    <input type="number" id="orders" placeholder="average order processing time" />
+                    <input type="number" id="buffer" placeholder="buffer line size" style="display:inline-block; width:150px; float:left;"/>
+                    <input type="number" id="deviation" placeholder="deviation size" style="display:inline-block; width:150px; float:right;"/>
+                    <input type="number" id="orders" placeholder="average order processing time" style="display:inline-block; width:150px; float:left;"/>
+                    <input type="number" id="lines" placeholder="how many lines are there" style="display:inline-block; width:150px; float:right;"/>
+
                     <button type="button" onclick="line();">submit</button>
                 </form>
             </div>
