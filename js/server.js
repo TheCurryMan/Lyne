@@ -24,7 +24,7 @@ function makeCorsRequest(message, number) {
     // This is a sample server that supports CORS.
     var url = 'https://shielded-reef-48843.herokuapp.com/?message='+message+'&phone='+number;
 
-    var xhr = createCORSRequest('GET', url);
+    var xhr = createCORSRequest('POST', url);
     if (!xhr) {
         alert('CORS not supported');
         return;
