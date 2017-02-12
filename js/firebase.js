@@ -7,13 +7,13 @@ function line() {
 
     var location = document.getElementById("location").value;
 
-    var eta = parseInt(document.getElementById("orders").value,10);
+    var eta = document.getElementById("orders").value,10;
 
-    var deviation = parseInt(document.getElementById("deviation").value,10);;
+    var deviation = document.getElementById("deviation").value,10;
 
-    var lines = parseInt(document.getElementById("lines").value,10);
+    var lines = document.getElementById("lines").value,10;
 
-    var buffer = parseInt(document.getElementById("buffer").value,10);
+    var buffer = document.getElementById("buffer").value,10;
 
     var code = document.getElementById("code").value;
     
