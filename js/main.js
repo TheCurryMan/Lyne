@@ -110,6 +110,61 @@ function getTime(){
     console.log(tied);
 }
 
+function notHere() {
+    var numbah = items[1].childNodes[1].innerHTML;
+    if(numbah.charAt(numbah.length-1) == ' ')
+    {
+        next();
+    }
+    else
+    {
+        var temp;
+        if(items.length>1)
+        {
+            temp = list.removeChild(items[1]);
+        }
+        var index = Math.min(3, items.length);
+        if(index == items.length)
+        {
+            list.appendChild(temp);
+        }
+        else
+        {
+            list.insertBefore(temp, item[i]);
+        }
+        var arrayelement = arrayLine[0];
+        var firsthalf = arrayLine.splice(1, index);
+        var secondhalf = arrayLine.splice(index, arrayLine.length);
+        arrayLine = firsthalf.concat(arrayelement, secondhalf);
+        var ref = firebase.database().ref('lines/' + storecode + '/Users/');
+        
+        if(items.length > 1)
+        {
+            var clone = items[1].cloneNode(true);
+           // console.log(clone);
+            document.getElementById("top").removeChild(items[0]);
+            document.getElementById("top").appendChild(clone);
+            document.getElementById("name").innerHTML=clone.childNodes[0].innerHTML;
+            document.getElementById("phone").innerHTML=clone.childNodes[1].innerHTML;
+        }
+        else
+        {
+            var clone = document.createElement("li");
+            document.getElementById("top").removeChild(items[0]);
+            document.getElementById("top").appendChild(clone);
+        }
+
+        ref.set(arrayLine);
+        updateNumber();
+        //if(items.length > 1)
+        //{
+        var name = items[1].childNodes[0].innerHTML;
+        var number = arrayLine[0];
+        var message = "Dear" + name + ", you are first in line! Please make your way to the register!";
+        makeCorsRequest(message, number);
+    }
+}
+
 function next() {
     counter+=1;
     getTime();
