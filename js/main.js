@@ -1,5 +1,5 @@
 var arrayLine = [];
-var storecode = window.name;
+var storecode = "PapaJohns345"; //window.name;
 console.log(storecode);
 var list = document.getElementById("line");
 var items = document.getElementsByTagName("li");
