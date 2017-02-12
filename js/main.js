@@ -122,6 +122,8 @@ function notHere() {
         {
             temp = items[1].cloneNode(true);
             temp.childNodes[1].innerHTML = items[1].childNodes[1].innerHTML + " ";
+            temp.removeAttribute("id");
+            console.log(temp);
             var index = Math.min(4, items.length);
             if(index == items.length)
             {
@@ -135,6 +137,10 @@ function notHere() {
             var firsthalf = arrayLine.splice(0, index);
             var secondhalf = arrayLine.splice(index, arrayLine.length);
             arrayLine = firsthalf.concat(arrayelement, secondhalf);
+            console.log(firsthalf);
+            console.log(arrayelement);
+            console.log(secondhalf);
+            console.log(arrayLine);
             next();
          }
     }
