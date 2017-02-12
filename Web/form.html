@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/form.css">
+    <img src="logo.png" class="logo" alt="Logo">
+</head>
+
+<body>
+    <form>
+        <!--<div class="code">-->
+        <!--    <input type="text" id="code" placeholder="code">-->
+        <!--</div>-->
+        <!--<div class="name">-->
+        <!--    <input type="text" id="name" placeholder="name">-->
+        <!--</div>-->
+        <!--<div class="location">-->
+        <!--    <input type="text" id="location" placeholder="address">-->
+        <!--</div>-->
+        <!--<div class="orders">-->
+        <!--    <input type="number" id="orders" placeholder="Time taken for each order">-->
+        <!--</div>-->
+        <!--<div class="buffer">-->
+        <!--    <input type="number" id="buffer" placeholder="Constant line size preference">-->
+        <!--</div>-->
+        <!--<button type="button" class="submit" onclick="line();">Submit</button>-->
+        <div class="login-page">
+            <div class="form">
+                <form class="login-form">
+                    <input type="text" id="name" placeholder="name" />
+                    <input type="text" id="code" placeholder="code" />
+                    <input type="text" id="location" placeholder="address" />
+                    <input type="number" id="buffer" placeholder="buffer line size" />
+                    <input type="number" id="orders" placeholder="average order processing time" />
+                    <button type="button" onclick="line();">submit</button>
+                </form>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC3OuzXgf_xkhCsvo1saTPzILk6Xi0v1_k",
+            authDomain: "lyne.firebaseapp.com",
+            databaseURL: "https://lyne.firebaseio.com",
+            storageBucket: "project-4313846950357733166.appspot.com",
+            messagingSenderId: "912183264441"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="js/firebase.js"></script>
+</body>
+
+
+</html>

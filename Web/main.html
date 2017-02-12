@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>HEHEXD</title>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    </head>
+    <body>
+        <div class="half" id="left">
+            <div id="bluelogo">
+                
+            </div>
+            <ul style="list-style: none" id="top">
+                <li>asdf</li>
+            </ul>
+            <ul style="list-style: none" id="line">
+            </ul>
+        </div>
+        <div class="half" id="right">
+            <div id="current">
+                <div id="currenttop">
+                    <h6 id="phone"></h6>
+                </div>
+                <div id="currentmid">
+                    <h6 id="name"></h6>
+                </div>
+                <div id="currentbot">
+                    <button src="css/img/x.png" id="no"></button>
+                    <button src="css/img/check.png" id="yes" onclick="next()"></button>
+                </div>
+                
+            </div>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+            </canvas>
+            <div id="info">
+                <div id="storeInfo">
+                    <h6 id="storeName">Papa Johns</h6>
+                    <h6 id="storeAddress">asdfasdf</6>
+                </div>
+                <div id="numDiv">
+                    <h1 id="num">123</h1>
+                    <h2 id="numText">People In Line</h2>
+                </div>
+                
+            </div>
+            <div id="buttons">
+                <button id="skip">NOT HERE</button>
+                <button id="next" onclick="next()">NEXT</button>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
