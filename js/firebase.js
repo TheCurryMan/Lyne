@@ -31,8 +31,8 @@ function line() {
         codename: code
     });
     window.name = code;
-    
-    window.location.href="main.html";
+    console.log("asdf");
+    window.location.href="http://avinashj.com/main.html";
     
     // xhr.open("POST","https://shielded-reef-48843.herokuapp.com/", true);
     // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
