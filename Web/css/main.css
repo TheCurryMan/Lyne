@@ -1,0 +1,217 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+body{
+    font-family: "Roboto", sans-serif;
+    background-image: url("img/bluebackground.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    margin: auto;
+}
+button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 15px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+}
+#currenttop {
+    display: block;
+    height: 100;
+    width: 100%;
+}
+#currentmid {
+    display: block;
+    height:150;
+    width:100%;
+}
+#currentbot {
+    display: block;
+    height: 150;
+    width: 100%;
+}
+#next{
+    
+}
+#skip{
+    
+}
+button:hover,
+button:active,
+button:focus {
+    background: #2b6fcd;
+}
+#info {
+    width: 95%;
+    height: 83%;
+    margin: auto;
+    background-color: #f2f2f2;
+    margin-bottom: 2%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+#buttons {
+    width: 100%;
+    height: 15%;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+h4 {
+    font-size: 25;
+    display: inline-block;
+    margin: 0;
+    margin-left:20;
+    margin-top: 20;
+}
+h5 {
+    font-size: 15;
+    display: block;
+    margin: 0;
+    margin-left: 80;
+}
+h6 {
+    margin: 30;
+}
+.half{
+    display: inline-block;
+}
+#left{
+    position:fixed;
+    width: 20%;
+    height: 100%;
+    background-color: #f2f2f2;
+    min-width: 200;
+}
+#right{
+    padding-left: 20%;
+    width:80%;
+
+}
+#bluelogo{
+    height: 20%;
+    width: 100%;
+}
+#storeInfo{
+    display:inline-block;
+    width: 100%;
+    margin-top: 20;
+}
+#storeName{
+    float: left;
+}
+#storeAddress{
+    float: right;
+}
+#numDiv {
+    text-align: center;
+}
+#line {
+    color: #f2f2f2;
+    font-size: 60;
+    height: 69%;
+    margin: auto;
+    margin-top: 1%;
+    overflow:auto;
+    padding: 0;
+    border-style:none;
+}
+#num {
+    font-size: 100;
+    margin: 0;
+}
+#numText{
+    margin: 0;
+}
+li{
+    counter-increment: step-counter;
+    font-size: 30;
+    width: 100%;
+    height: 70;
+    margin: auto;
+    background-color: #f2f2f2;
+    color: black;
+}
+li:before {
+    content: counter(step-counter);
+    background-color: #f2f2f2;
+    color: green;
+    font-weight: bold;
+    margin-top: 20;
+    margin-left: 20;
+    width: 100;
+}
+#buff{
+    background-color: red;
+}
+#buff:before{
+    background-color: red;
+}
+#first {
+    height: 0;
+    overflow: hidden;
+    border-width: 0;
+}
+#top{
+    width: 105%;
+    height: 10%;
+    padding: 0;
+    margin:0;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#top:before{
+    
+}
+#top h4 {
+    font-size: 35;
+}
+#top h5 {
+    font-size: 20;
+}
+#top li{
+    height:100%;
+}
+#current {
+    display: block;
+    background-color: #f2f2f2;
+    width: 400;
+    height: 400;
+    margin: auto;
+}
+#name{
+    text-align:center;
+    font-size: 40;
+    font-weight:bold;
+}
+#phone{
+    float:right;
+    font-size: 20;
+}
+#yes {
+    width: 100;
+    height: 100;
+    border-radius:20;
+    border-width:2px;
+    border-style: solid;
+    display: inline-block;
+    float: left;
+    margin-left:50;
+}
+#no {
+    width: 100;
+    height: 100;
+    border-radius:20;
+    border-width:2px;
+    border-style: solid;
+    display: inline-block;
+    float: right;
+    margin-right:50;
+}
