@@ -270,7 +270,7 @@ ctx.stroke();
 
 }
   }
-var h1 = document.getElementsByTagName('h1')[0],
+var h1 = document.getElementById("stopper")[0],
     //start = document.getElementById('start'),
    //// stop = document.getElementById('stop'),
     clear = document.getElementById('clear'),
