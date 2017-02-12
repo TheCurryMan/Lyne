@@ -27,14 +27,12 @@ function makeCorsRequest(message, number) {
     var xhr = createCORSRequest('GET', url);
     console.log(xhr);
     if (!xhr) {
-        alert('CORS not supported');
         return;
     }
 
     // Response handlers.
     xhr.onload = function() {
         var text = xhr.responseText;
-        alert('Response from CORS request to ' + url + ': ');
     };
 
     xhr.onerror = function() {
