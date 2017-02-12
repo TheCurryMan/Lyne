@@ -140,12 +140,12 @@ function next() {
     //if(items.length > 1)
     //{
         var name = items[1].childNodes[0].innerHTML;
-        var number = arrayLine[0];
+        var number = '+1' + arrayLine[0];
         console.log(name);
         console.log(number);
 
         var message = "Dear" + name + ", you are first in line! Please make your way to the register!";
-        //makeCorsRequest(number, message);
+        makeCorsRequest(number, message);
     //}
     
 }
