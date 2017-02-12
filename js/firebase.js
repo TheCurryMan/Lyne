@@ -30,7 +30,7 @@ function line() {
     });
     window.name = code;
     console.log("asdf");
-    window.location.href="http://avinashj.com/Lyne/main.html";
+    window.location.href="main.html";
     
     // xhr.open("POST","https://shielded-reef-48843.herokuapp.com/", true);
     // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
