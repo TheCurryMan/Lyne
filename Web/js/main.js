@@ -6,15 +6,16 @@ var buffer = 0;
 var top = document.getElementById("top");
 var first = 1;
 var array = [];
-var aMap = {};
-var standard = 0;
-var counter = 0;
+//var aMap = {};
+//var standard = 0;
+//var counter = 0;
+var vcontext = 0;
+
 
 
 
 function updateNumber()
 {
-   
     firebase.database().ref('lines/'+ storecode + '/count').set(items.length - 1);
     
     document.getElementById("num").innerHTML = items.length - 1;
@@ -43,15 +44,15 @@ function updateNumber()
 
 
 function addToList(snapshotValue) {
- array.push(event.timeStamp);
- draw(1);
-  
+ //array.push(event.timeStamp);
+ //draw();
+ //drawpeople();
     arrayLine.push(snapshotValue);
     var li = document.createElement("li");
     var user = firebase.database().ref('users/' + snapshotValue);
     if(user == null)
     {
-            li.appendChild(document.createTextNode(" " + snapshotValue));
+            li.appendChild(document.createTextNode("+1(" + snapshotValue.substring(0,3) + ") " + snapshotValue.substring(3, 6) + "-" + snapshotValue.substring(6, snapshotValue.length)));
     }
     else
     {
@@ -59,7 +60,7 @@ function addToList(snapshotValue) {
             var a = document.createElement("h4");
             var b = document.createElement("h5");
             var c = document.createTextNode(snapshot.val());
-            var d = document.createTextNode(snapshotValue);
+            var d = document.createTextNode("+1(" + snapshotValue.substring(0,3) + ") " + snapshotValue.substring(3, 6) + "-" + snapshotValue.substring(6, snapshotValue.length));
             a.appendChild(c);
             b.appendChild(d);
             li.appendChild(a);
@@ -75,7 +76,7 @@ function addToList(snapshotValue) {
             var a = document.createElement("h4");
             var b = document.createElement("h5");
             var c = document.createTextNode(snapshot.val());
-            var d = document.createTextNode(snapshotValue);
+            var d = document.createTextNode("+1(" + snapshotValue.substring(0,3) + ") " + snapshotValue.substring(3, 6) + "-" + snapshotValue.substring(6, snapshotValue.length));
             a.appendChild(c);
             b.appendChild(d);
             lis.appendChild(a);
@@ -84,7 +85,7 @@ function addToList(snapshotValue) {
             document.getElementById("top").removeChild(items[0]);
             document.getElementById("top").appendChild(lis);
             document.getElementById("name").innerHTML=snapshot.val();
-            document.getElementById("phone").innerHTML=snapshotValue;
+            document.getElementById("phone").innerHTML="+1(" + snapshotValue.substring(0,3) + ") " + snapshotValue.substring(3, 6) + "-" + snapshotValue.substring(6, snapshotValue.length);
             first = 0;
         });
         
@@ -110,6 +111,7 @@ function next() {
     if(items.length > 1)
     {
         var clone = items[1].cloneNode(true);
+        console.log(clone);
         document.getElementById("top").removeChild(items[0]);
         document.getElementById("top").appendChild(clone);
         document.getElementById("name").innerHTML=clone.childNodes[0].innerHTML;
@@ -149,20 +151,50 @@ function init() {
 
 
 //////
+function drawpeople(){
+    var c = document.getElementById("myCanvas2");
 
-function draw(p){
+var ctx = c.getContext("2d");
+ctx.clearRect(0, 0, c.width, c.height);
+var context = 500/(array[array.length-1]+1-array[0]);
+ctx.fillStyle = "white";
+if(items.length-1>vcontext){
+    vcontext = (items.length-1);
+}
+    console.log(200/vcontext*(items.length-1));
+
+for(var i = 0; i< items.length-1; i++) {
+    ctx.fillStyle = "white";
+ctx.beginPath();
+for(var j = 0; j < array.length;j++){
+ctx.arc(context*(array[j]-array[0]),200-200/vcontext*(items.length-1),15,0,2*Math.PI);
+//ctx.moveTo(context*(array[j]-array[0]), 200)
+//ctx.lineTo(context*(array[j]-array[0]), 50+15);
+ctx.fill();
+ctx.stroke();}
+}}
+
+function draw(){
 
       var c = document.getElementById("myCanvas");
+      c.set
+      
 var ctx = c.getContext("2d");
-ctx.moveTo(0,100);
-var context = (array[array.length-1]-array[0])%100;
-
-
+ctx.clearRect(0, 0, c.width, c.height);
+var context = 500/(array[array.length-1]+1-array[0]);
+ctx.fillStyle = "white";
+console.log(array.length);
 for(var i = 0; i< array.length; i++) {
-    console.log(context*i);
-    ctx.beginPath();
-ctx.arc(context*i+20,50,10,0,2*Math.PI);
-}
+    console.log(context*(array[i]-array[0]));
+    ctx.fillStyle = "white";
+ctx.beginPath();
+ctx.arc(context*(array[i]-array[0]),50,15,0,2*Math.PI);
+ctx.moveTo(context*(array[i]-array[0]), 200)
+ctx.lineTo(context*(array[i]-array[0]), 50+15);
+ctx.fill();
 ctx.stroke();
+
+
+}
   }
-init();
+init(); 
