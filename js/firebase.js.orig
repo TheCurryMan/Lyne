@@ -33,7 +33,11 @@ function line() {
     });
     sessionStorage.setItem("storecode", code);
     
+<<<<<<< HEAD
+    window.location.href="http://avinashj.com/main.html";
+=======
     window.location.href="main.html";
+>>>>>>> ea684757f1bc177301d0b86792fb042918f18b03
     
     // xhr.open("POST","https://shielded-reef-48843.herokuapp.com/", true);
     // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

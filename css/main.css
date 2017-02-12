@@ -30,6 +30,8 @@ button {
     display: block;
     height: 100;
     width: 100%;
+    background-color:#a3a3a3;
+    color:#f2f2f2;
 }
 #currentmid {
     display: block;
@@ -115,12 +117,13 @@ canvas{
 #storeName{
     float: left;
     margin:20;
-    font-size:30;
+    font-size:32;
 }
 #storeAddress{
     float: right;
     margin:20;
-    font-size:20;
+    margin-top:35;
+    font-size:15;
 }
 #numDiv {
     text-align: center;
@@ -208,12 +211,12 @@ li:before {
 }
 #name{
     text-align:center;
-    font-size: 40;
+    font-size: 50;
     font-weight:bold;
 }
 #phone{
     float:right;
-    font-size: 20;
+    font-size: 25;
 }
 #yes {
     width: 150;
@@ -250,4 +253,14 @@ li:before {
     font-size:60;
     margin-top:40;
     margin-left:40;
+}
+#timeh{
+    font-weight: bold;
+    font-size: 30;
+    margin: auto;
+    text-align: center;
+}
+#eta{
+    margin: auto;
+    text-align: center;
 }
