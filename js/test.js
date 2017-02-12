@@ -116,7 +116,8 @@ function next() {
     var name = firebase.database().ref('users/' + number).child(name);
     var eta = firebase.database().ref('lines/' + storecode).child(eta);
     var message = "Dear" + name + ", you are first in line! Please arrive within the next" + eta + "minutes!"; 
-    
+    console.log(number);
+    console.log(message);
     makeCorsRequest(number,message);
 }
 function init() {
