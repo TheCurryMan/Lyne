@@ -137,8 +137,8 @@ function next() {
     
     ref.set(arrayLine);
     updateNumber();
-    if(items.length > 1)
-    {
+    //if(items.length > 1)
+    //{
         var name = items[1].childNodes[0].innerHTML;
         var number = arrayLine[0];
         console.log(name);
@@ -146,7 +146,7 @@ function next() {
 
         var message = "Dear" + name + ", you are first in line! Please make your way to the register!";
         //makeCorsRequest(number, message);
-    }
+    //}
     
 }
 function init() {
