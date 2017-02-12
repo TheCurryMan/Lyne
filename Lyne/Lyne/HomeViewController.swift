@@ -268,10 +268,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
             }
             
             cell.currentLineName.text = line.name
+            if line.users?.count != 0 {
             for (index, element) in line.users!.enumerated() {
                 if UserDefaults.standard.value(forKey: "number") as! String == element {
                     cell.currentLinePosition.text = String(index+1)
                 }
+            }
             }
             //cell.currentLinePosition.text = String(line.count)
             cell.backgroundLabel.layer.cornerRadius = 10
