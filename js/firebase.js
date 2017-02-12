@@ -1,8 +1,6 @@
 
 function line() {
     
-    var xhr = new XMLHttpRequest();
-    
     var name = document.getElementById("name").value;
 
     var location = document.getElementById("location").value;
