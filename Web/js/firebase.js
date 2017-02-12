@@ -1,6 +1,8 @@
 
 function line() {
-
+    
+    var xhr = new XMLHttpRequest();
+    
     var name = document.getElementById("name").value;
 
     var location = document.getElementById("location").value;
@@ -28,5 +30,9 @@ function line() {
     });
     
     window.location.href="https://lyne-thecurryman.c9users.io/Web/test.html";
+    
+    // xhr.open("POST","https://shielded-reef-48843.herokuapp.com/", true);
+    // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    // xhr.send("?title=you are 3rd in line");
 
 }

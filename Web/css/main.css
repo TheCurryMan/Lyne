@@ -9,17 +9,20 @@ body{
     width: 100%;
     margin: auto;
 }
+
 button {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
     border: 0;
+    background: #f2f2f2;
     padding: 15px;
     color: #FFFFFF;
     font-size: 15px;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
+    border:0;
     display: inline-block;
     float: left;
 }
@@ -30,12 +33,12 @@ button {
 }
 #currentmid {
     display: block;
-    height:150;
+    height:200;
     width:100%;
 }
 #currentbot {
     display: block;
-    height: 150;
+    height: 200;
     width: 100%;
 }
 #next{
@@ -44,18 +47,20 @@ button {
 #skip{
     
 }
-button:hover,
-button:active,
-button:focus {
-    background: #2b6fcd;
-}
+
 #info {
-    width: 95%;
-    height: 83%;
+    display: inline-block;
+    width: 600;
+    height: 500;
     margin: auto;
-    background-color: #f2f2f2;
+    margin-top: 100;
+    margin-left: 5%;
+    color: #f2f2f2;
+    /*border: 2px white solid;*/
+    /*background-color: #f2f2f2;*/
     margin-bottom: 2%;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    vertical-align:center;
+    /*box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
 
 }
 #buttons {
@@ -83,6 +88,10 @@ h6 {
 .half{
     display: inline-block;
 }
+canvas{
+    display: block;
+    margin: auto;
+}
 #left{
     position:fixed;
     width: 20%;
@@ -102,13 +111,16 @@ h6 {
 #storeInfo{
     display:inline-block;
     width: 100%;
-    margin-top: 20;
 }
 #storeName{
     float: left;
+    margin:20;
+    font-size:30;
 }
 #storeAddress{
     float: right;
+    margin:20;
+    font-size:20;
 }
 #numDiv {
     text-align: center;
@@ -142,7 +154,7 @@ li{
 li:before {
     content: counter(step-counter);
     background-color: #f2f2f2;
-    color: green;
+    color: #2b6fcd;
     font-weight: bold;
     margin-top: 20;
     margin-left: 20;
@@ -180,11 +192,19 @@ li:before {
     height:100%;
 }
 #current {
-    display: block;
+    display: inline-block;
     background-color: #f2f2f2;
     width: 400;
-    height: 400;
-    margin: auto;
+    height: 500;
+    float: left;
+    margin-top:100;
+    margin-left: 50;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#topcontent{
+    display: block;
+    height: 600;
+    width: 100%;
 }
 #name{
     text-align:center;
@@ -196,22 +216,38 @@ li:before {
     font-size: 20;
 }
 #yes {
-    width: 100;
-    height: 100;
+    width: 150;
+    height: 150;
     border-radius:20;
     border-width:2px;
-    border-style: solid;
-    display: inline-block;
-    float: left;
-    margin-left:50;
-}
-#no {
-    width: 100;
-    height: 100;
-    border-radius:20;
-    border-width:2px;
-    border-style: solid;
+    border-style: none;
     display: inline-block;
     float: right;
-    margin-right:50;
+    margin-right:30;
+}
+#no {
+    width: 150;
+    height: 150;
+    border-radius:20;
+    border-width:2px;
+    border-style: none;
+    display: inline-block;
+    float: left;
+    margin-left:30;
+}
+.but {
+    width:100%;
+    height:100%;
+}
+#bluelogo {
+    display: block;
+    margin-left: 13%;
+    width: 200;
+    height: 200;
+}
+#heade{
+    color:#f2f2f2;
+    font-size:60;
+    margin-top:40;
+    margin-left:40;
 }

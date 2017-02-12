@@ -6,6 +6,7 @@ var buffer = 0;
 var top = document.getElementById("top");
 var first = 1;
 
+
 function updateNumber()
 {
 
@@ -110,7 +111,13 @@ function next() {
     }
     
     ref.set(arrayLine);
-    updateNumber();
+    updateNumber()
+    var number = arrayLine[0];
+    var name = firebase.database().ref('users/' + number).child(name);
+    var eta = firebase.database().ref('lines/' + storecode).child(eta);
+    var message = "Dear" + name + ", you are first in line! Please arrive within the next" + eta + "minutes!"; 
+    
+    makeCorsRequest(number,message);
 }
 function init() {
     var config = {
