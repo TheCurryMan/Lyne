@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19AF193FDD0C547D6E67E207 /* Pods_LyneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4EA1269422EBC606E0004C /* Pods_LyneUITests.framework */; };
+		2C9CF4706AFCD5FDFB21AC65 /* Pods_LyneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC27692785754147B8119E24 /* Pods_LyneTests.framework */; };
+		5E05D3C5B56E228FDC718ACE /* Pods_Lyne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30BD3E9517B90B4A1AC391B /* Pods_Lyne.framework */; };
 		E108A8EA1E4F0806002EA51B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A8E91E4F0806002EA51B /* AppDelegate.swift */; };
-		E108A8EC1E4F0806002EA51B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A8EB1E4F0806002EA51B /* ViewController.swift */; };
+		E108A8EC1E4F0806002EA51B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A8EB1E4F0806002EA51B /* HomeViewController.swift */; };
 		E108A8EF1E4F0806002EA51B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E108A8ED1E4F0806002EA51B /* Main.storyboard */; };
 		E108A8F11E4F0806002EA51B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E108A8F01E4F0806002EA51B /* Assets.xcassets */; };
 		E108A8F41E4F0806002EA51B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E108A8F21E4F0806002EA51B /* LaunchScreen.storyboard */; };
 		E108A8FF1E4F0806002EA51B /* LyneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A8FE1E4F0806002EA51B /* LyneTests.swift */; };
 		E108A90A1E4F0806002EA51B /* LyneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A9091E4F0806002EA51B /* LyneUITests.swift */; };
+		E108A9181E4F0C83002EA51B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E108A9171E4F0C83002EA51B /* GoogleService-Info.plist */; };
+		E108A91A1E4F0E14002EA51B /* cancel (1).png in Resources */ = {isa = PBXBuildFile; fileRef = E108A9191E4F0E14002EA51B /* cancel (1).png */; };
+		E108A91D1E4F0E91002EA51B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A91C1E4F0E91002EA51B /* SignUpViewController.swift */; };
+		E108A9211E4F0FB2002EA51B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A9201E4F0FB2002EA51B /* LoginViewController.swift */; };
+		E108A9231E4F1C39002EA51B /* LineSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E108A9221E4F1C39002EA51B /* LineSearchTableViewCell.xib */; };
+		E108A9251E4F771D002EA51B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = E108A9241E4F771D002EA51B /* Line.swift */; };
+		E108A9281E4F8A14002EA51B /* CurrentLinesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E108A9271E4F8A14002EA51B /* CurrentLinesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +44,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F4EA1269422EBC606E0004C /* Pods_LyneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4460899FBA683A9331422C54 /* Pods-LyneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyneTests/Pods-LyneTests.release.xcconfig"; sourceTree = "<group>"; };
+		67E1B04F4EA0E2640F74D6FB /* Pods-Lyne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyne.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lyne/Pods-Lyne.debug.xcconfig"; sourceTree = "<group>"; };
+		8C141CBBF723C89C2DBA38D0 /* Pods-LyneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyneUITests/Pods-LyneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		95EE18105396940168B51BF9 /* Pods-LyneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyneTests/Pods-LyneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D5FC82C16DEE10F890DED96F /* Pods-Lyne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyne.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lyne/Pods-Lyne.release.xcconfig"; sourceTree = "<group>"; };
+		D8824E7B5F7E4D12C03B0033 /* Pods-LyneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyneUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyneUITests/Pods-LyneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DC27692785754147B8119E24 /* Pods_LyneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E108A8E61E4F0806002EA51B /* Lyne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E108A8E91E4F0806002EA51B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E108A8EB1E4F0806002EA51B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E108A8EB1E4F0806002EA51B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E108A8EE1E4F0806002EA51B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E108A8F01E4F0806002EA51B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E108A8F31E4F0806002EA51B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +65,14 @@
 		E108A9051E4F0806002EA51B /* LyneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E108A9091E4F0806002EA51B /* LyneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyneUITests.swift; sourceTree = "<group>"; };
 		E108A90B1E4F0806002EA51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E108A9171E4F0C83002EA51B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E108A9191E4F0E14002EA51B /* cancel (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel (1).png"; sourceTree = "<group>"; };
+		E108A91C1E4F0E91002EA51B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E108A9201E4F0FB2002EA51B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E108A9221E4F1C39002EA51B /* LineSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineSearchTableViewCell.xib; sourceTree = "<group>"; };
+		E108A9241E4F771D002EA51B /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		E108A9271E4F8A14002EA51B /* CurrentLinesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentLinesTableViewCell.xib; sourceTree = "<group>"; };
+		F30BD3E9517B90B4A1AC391B /* Pods_Lyne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lyne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E05D3C5B56E228FDC718ACE /* Pods_Lyne.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9CF4706AFCD5FDFB21AC65 /* Pods_LyneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +96,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AF193FDD0C547D6E67E207 /* Pods_LyneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86C18940250B1039DEC66330 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F30BD3E9517B90B4A1AC391B /* Pods_Lyne.framework */,
+				DC27692785754147B8119E24 /* Pods_LyneTests.framework */,
+				2F4EA1269422EBC606E0004C /* Pods_LyneUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D331A2FF058AA27A90DD00D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67E1B04F4EA0E2640F74D6FB /* Pods-Lyne.debug.xcconfig */,
+				D5FC82C16DEE10F890DED96F /* Pods-Lyne.release.xcconfig */,
+				95EE18105396940168B51BF9 /* Pods-LyneTests.debug.xcconfig */,
+				4460899FBA683A9331422C54 /* Pods-LyneTests.release.xcconfig */,
+				8C141CBBF723C89C2DBA38D0 /* Pods-LyneUITests.debug.xcconfig */,
+				D8824E7B5F7E4D12C03B0033 /* Pods-LyneUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E108A8DD1E4F0805002EA51B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +133,8 @@
 				E108A8FD1E4F0806002EA51B /* LyneTests */,
 				E108A9081E4F0806002EA51B /* LyneUITests */,
 				E108A8E71E4F0806002EA51B /* Products */,
+				D331A2FF058AA27A90DD00D2 /* Pods */,
+				86C18940250B1039DEC66330 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +152,14 @@
 			isa = PBXGroup;
 			children = (
 				E108A8E91E4F0806002EA51B /* AppDelegate.swift */,
-				E108A8EB1E4F0806002EA51B /* ViewController.swift */,
-				E108A8ED1E4F0806002EA51B /* Main.storyboard */,
+				E108A9261E4F7723002EA51B /* Models */,
+				E108A91F1E4F0EAA002EA51B /* Views */,
+				E108A91E1E4F0EA2002EA51B /* Controllers */,
+				E108A91B1E4F0E1B002EA51B /* Assets */,
 				E108A8F01E4F0806002EA51B /* Assets.xcassets */,
 				E108A8F21E4F0806002EA51B /* LaunchScreen.storyboard */,
 				E108A8F51E4F0806002EA51B /* Info.plist */,
+				E108A9171E4F0C83002EA51B /* GoogleService-Info.plist */,
 			);
 			path = Lyne;
 			sourceTree = "<group>";
@@ -125,6 +182,42 @@
 			path = LyneUITests;
 			sourceTree = "<group>";
 		};
+		E108A91B1E4F0E1B002EA51B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E108A9191E4F0E14002EA51B /* cancel (1).png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		E108A91E1E4F0EA2002EA51B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E108A9201E4F0FB2002EA51B /* LoginViewController.swift */,
+				E108A91C1E4F0E91002EA51B /* SignUpViewController.swift */,
+				E108A8EB1E4F0806002EA51B /* HomeViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E108A91F1E4F0EAA002EA51B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E108A8ED1E4F0806002EA51B /* Main.storyboard */,
+				E108A9221E4F1C39002EA51B /* LineSearchTableViewCell.xib */,
+				E108A9271E4F8A14002EA51B /* CurrentLinesTableViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E108A9261E4F7723002EA51B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E108A9241E4F771D002EA51B /* Line.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E108A90E1E4F0806002EA51B /* Build configuration list for PBXNativeTarget "Lyne" */;
 			buildPhases = (
+				F8E9C407343711BA66F06988 /* [CP] Check Pods Manifest.lock */,
 				E108A8E21E4F0806002EA51B /* Sources */,
 				E108A8E31E4F0806002EA51B /* Frameworks */,
 				E108A8E41E4F0806002EA51B /* Resources */,
+				50FFACC23EF91667CF542EF2 /* [CP] Embed Pods Frameworks */,
+				E55CF449D52885E15E03434C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +245,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E108A9111E4F0806002EA51B /* Build configuration list for PBXNativeTarget "LyneTests" */;
 			buildPhases = (
+				0CA98C34E2C73CE03470FB64 /* [CP] Check Pods Manifest.lock */,
 				E108A8F61E4F0806002EA51B /* Sources */,
 				E108A8F71E4F0806002EA51B /* Frameworks */,
 				E108A8F81E4F0806002EA51B /* Resources */,
+				0D7DE853683B7D52F492C7C9 /* [CP] Embed Pods Frameworks */,
+				64D661EEAE14807C68BAF3DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +266,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E108A9141E4F0806002EA51B /* Build configuration list for PBXNativeTarget "LyneUITests" */;
 			buildPhases = (
+				DBE91CB34A8A86EFDA7B3804 /* [CP] Check Pods Manifest.lock */,
 				E108A9011E4F0806002EA51B /* Sources */,
 				E108A9021E4F0806002EA51B /* Frameworks */,
 				E108A9031E4F0806002EA51B /* Resources */,
+				0F17C2452E957E68FFC0219E /* [CP] Embed Pods Frameworks */,
+				9207149B26D41072EC354CFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +337,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E108A91A1E4F0E14002EA51B /* cancel (1).png in Resources */,
+				E108A9231E4F1C39002EA51B /* LineSearchTableViewCell.xib in Resources */,
+				E108A9281E4F8A14002EA51B /* CurrentLinesTableViewCell.xib in Resources */,
+				E108A9181E4F0C83002EA51B /* GoogleService-Info.plist in Resources */,
 				E108A8F41E4F0806002EA51B /* LaunchScreen.storyboard in Resources */,
 				E108A8F11E4F0806002EA51B /* Assets.xcassets in Resources */,
 				E108A8EF1E4F0806002EA51B /* Main.storyboard in Resources */,
@@ -257,13 +363,154 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CA98C34E2C73CE03470FB64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0D7DE853683B7D52F492C7C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyneTests/Pods-LyneTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F17C2452E957E68FFC0219E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyneUITests/Pods-LyneUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50FFACC23EF91667CF542EF2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lyne/Pods-Lyne-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64D661EEAE14807C68BAF3DE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyneTests/Pods-LyneTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9207149B26D41072EC354CFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyneUITests/Pods-LyneUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE91CB34A8A86EFDA7B3804 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E55CF449D52885E15E03434C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lyne/Pods-Lyne-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8E9C407343711BA66F06988 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E108A8E21E4F0806002EA51B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E108A8EC1E4F0806002EA51B /* ViewController.swift in Sources */,
+				E108A9211E4F0FB2002EA51B /* LoginViewController.swift in Sources */,
+				E108A91D1E4F0E91002EA51B /* SignUpViewController.swift in Sources */,
+				E108A8EC1E4F0806002EA51B /* HomeViewController.swift in Sources */,
 				E108A8EA1E4F0806002EA51B /* AppDelegate.swift in Sources */,
+				E108A9251E4F771D002EA51B /* Line.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +658,7 @@
 		};
 		E108A90F1E4F0806002EA51B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67E1B04F4EA0E2640F74D6FB /* Pods-Lyne.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3V593WX43L;
@@ -424,6 +672,7 @@
 		};
 		E108A9101E4F0806002EA51B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5FC82C16DEE10F890DED96F /* Pods-Lyne.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3V593WX43L;
@@ -437,6 +686,7 @@
 		};
 		E108A9121E4F0806002EA51B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95EE18105396940168B51BF9 /* Pods-LyneTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,6 +702,7 @@
 		};
 		E108A9131E4F0806002EA51B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4460899FBA683A9331422C54 /* Pods-LyneTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -467,6 +718,7 @@
 		};
 		E108A9151E4F0806002EA51B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C141CBBF723C89C2DBA38D0 /* Pods-LyneUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3V593WX43L;
@@ -481,6 +733,7 @@
 		};
 		E108A9161E4F0806002EA51B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8824E7B5F7E4D12C03B0033 /* Pods-LyneUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3V593WX43L;
@@ -512,6 +765,7 @@
 				E108A9101E4F0806002EA51B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E108A9111E4F0806002EA51B /* Build configuration list for PBXNativeTarget "LyneTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +774,7 @@
 				E108A9131E4F0806002EA51B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E108A9141E4F0806002EA51B /* Build configuration list for PBXNativeTarget "LyneUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +783,7 @@
 				E108A9161E4F0806002EA51B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

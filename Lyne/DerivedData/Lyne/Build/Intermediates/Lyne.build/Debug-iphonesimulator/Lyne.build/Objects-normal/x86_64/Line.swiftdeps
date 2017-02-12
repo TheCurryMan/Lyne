@@ -1,0 +1,90 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Line"
+provides-nominal:
+- "C4Lyne4Line"
+provides-member:
+- ["C4Lyne4Line", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Int"
+- "Line"
+- "IntegerLiteralType"
+- "FloatLiteralType"
+- "String"
+depends-member:
+- ["Ps9AnyObject", ""]
+- ["Si", "deinit"]
+- ["C4Lyne4Line", "Int"]
+- ["C4Lyne4Line", "String"]
+- ["C4Lyne4Line", "address"]
+- ["C4Lyne4Line", "code"]
+- ["C4Lyne4Line", "count"]
+- ["C4Lyne4Line", "deinit"]
+- ["C4Lyne4Line", "eta"]
+- ["C4Lyne4Line", "init"]
+- ["C4Lyne4Line", "name"]
+- ["C4Lyne4Line", "users"]
+- ["Sq", "deinit"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Si"
+- "C4Lyne4Line"
+- "Sq"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/Firebase/Core/Sources/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/Firebase/Core/Sources/Firebase.h"
+interface-hash: "5afb06801a5a6fca35ceda6d773c5535"
