@@ -24,6 +24,7 @@ class LineSearchTableViewCell: UITableViewCell {
         ref.child("lines").child(lineCode.text!).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
+            var count = value?["count"] as? Int
             if let users = value?["Users"] as? [String] {
                 var userFinal = [String]()
                 userFinal = users
@@ -33,9 +34,7 @@ class LineSearchTableViewCell: UITableViewCell {
                 var users = [UserDefaults.standard.value(forKey: "number") as! String]
                 self.ref.child("lines/\(self.lineCode.text!)/Users").setValue(users)
             }
-            
-            
-            // ...
+            self.ref.child("lines/\(self.lineCode.text!)/count").setValue(count!+1)
         }) { (error) in
             print(error.localizedDescription)
         }
@@ -58,6 +57,11 @@ class LineSearchTableViewCell: UITableViewCell {
         }) { (error) in
             print(error.localizedDescription)
         }
+        
+        let nc = NotificationCenter.default
+        nc.post(name:Notification.Name(rawValue:"goback"),
+                object: nil,
+                userInfo: nil)
         
     }
 }
@@ -94,6 +98,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.register(UINib(nibName: "LineSearchTableViewCell", bundle: nil), forCellReuseIdentifier: "line")
         tableView.register(UINib(nibName: "CurrentLinesTableViewCell", bundle: nil), forCellReuseIdentifier: "current")
+        
+        let nc = NotificationCenter.default
+        nc.addObserver(forName:Notification.Name(rawValue:"goback"),
+                       object:nil, queue:nil,
+                       using:goBackAndRefresh)
+        
         self.ref = FIRDatabase.database().reference().child("lines")
         
         var refHandle = ref.observe(FIRDataEventType.value, with: { (snapshot) in
@@ -118,7 +128,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         searchController.dimsBackgroundDuringPresentation = false;
         searchController.searchResultsUpdater = self
         searchController.dismiss(animated: false, completion: nil)
+        searchController.searchBar.barTintColor = UIColor.white
+        searchController.searchBar.tintColor = UIColor.init(red: 41/256, green: 182/256, blue: 245/256, alpha: 1)
+        
         tableView.tableHeaderView = searchController.searchBar
+        
         
     }
     
@@ -170,6 +184,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         tableView.reloadData()
     }
     
+    func goBackAndRefresh(notification:Notification) -> Void {
+        searchController.isActive = false
+        isSearching = false
+        tableView.reloadData()
+    }
 
     
     func getUserData(){

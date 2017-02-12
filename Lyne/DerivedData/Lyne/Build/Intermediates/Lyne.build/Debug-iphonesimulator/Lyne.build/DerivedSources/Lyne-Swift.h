@@ -173,6 +173,7 @@ SWIFT_CLASS("_TtC4Lyne18HomeViewController")
 - (void)searchBarCancelButtonClicked:(UISearchBar * _Nonnull)searchBar;
 - (void)updateSearchResultsForSearchController:(UISearchController * _Nonnull)searchController;
 - (void)filterContentForSearchTextWithSearchText:(NSString * _Nonnull)searchText scope:(NSString * _Nonnull)scope;
+- (void)goBackAndRefreshWithNotification:(NSNotification * _Nonnull)notification;
 - (void)getUserData;
 - (void)getCurrentLines;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
