@@ -123,6 +123,7 @@ function notHere() {
             temp = items[1].cloneNode(true);
             temp.childNodes[1].innerHTML = items[1].childNodes[1].innerHTML + " ";
             temp.removeAttribute("id");
+            
             console.log(temp);
             var index = Math.min(4, items.length);
             if(index == items.length)
