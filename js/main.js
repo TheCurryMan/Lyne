@@ -8,8 +8,9 @@ var first = 1;
 var array = [];
 //var aMap = {};
 //var standard = 0;
-//var counter = 0;
+var counter = 0;
 var vcontext = 0;
+var starttime;
 
 
 
@@ -47,6 +48,7 @@ function addToList(snapshotValue) {
  //array.push(event.timeStamp);
  //draw();
  //drawpeople();
+ starttime = event.timeStamp;
     arrayLine.push(snapshotValue);
     var li = document.createElement("li");
     var user = firebase.database().ref('users/' + snapshotValue);
@@ -81,7 +83,7 @@ function addToList(snapshotValue) {
             b.appendChild(d);
             lis.appendChild(a);
             lis.appendChild(b);
-            console.log(lis);
+           // console.log(lis);
             document.getElementById("top").removeChild(items[0]);
             document.getElementById("top").appendChild(lis);
             document.getElementById("name").innerHTML=snapshot.val();
@@ -94,14 +96,21 @@ function addToList(snapshotValue) {
     
 }
 function storeInfo(snapshotValue) {
-    console.log(snapshotValue);
+   // console.log(snapshotValue);
     buffer = snapshotValue.buffer;
     document.getElementById("storeName").innerHTML = snapshotValue.name;
     document.getElementById("storeAddress").innerHTML = snapshotValue.location;
     updateNumber();
 }
+function getTime(){
+    var tied = (event.timeStamp-starttime)/counter;
+    tied = tied/1000;
+    console.log(tied);
+}
 
 function next() {
+    counter+=1;
+    getTime();
     if(items.length>1)
     {
         list.removeChild(items[1]);
@@ -111,7 +120,7 @@ function next() {
     if(items.length > 1)
     {
         var clone = items[1].cloneNode(true);
-        console.log(clone);
+       // console.log(clone);
         document.getElementById("top").removeChild(items[0]);
         document.getElementById("top").appendChild(clone);
         document.getElementById("name").innerHTML=clone.childNodes[0].innerHTML;
@@ -161,7 +170,7 @@ ctx.fillStyle = "white";
 if(items.length-1>vcontext){
     vcontext = (items.length-1);
 }
-    console.log(200/vcontext*(items.length-1));
+  //  console.log(200/vcontext*(items.length-1));
 
 for(var i = 0; i< items.length-1; i++) {
     ctx.fillStyle = "white";
@@ -183,9 +192,9 @@ var ctx = c.getContext("2d");
 ctx.clearRect(0, 0, c.width, c.height);
 var context = 500/(array[array.length-1]+1-array[0]);
 ctx.fillStyle = "white";
-console.log(array.length);
+//console.log(array.length);
 for(var i = 0; i< array.length; i++) {
-    console.log(context*(array[i]-array[0]));
+ //   console.log(context*(array[i]-array[0]));
     ctx.fillStyle = "white";
 ctx.beginPath();
 ctx.arc(context*(array[i]-array[0]),50,15,0,2*Math.PI);
