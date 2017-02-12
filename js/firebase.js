@@ -30,7 +30,7 @@ function line() {
         count: count,
         codename: code
     });
-    window.sessionStorage.setItem("storecode", code);
+    window.name = code;
     
     window.location.href="main.html";
     

@@ -1,5 +1,5 @@
 var arrayLine = [];
-var storecode = window.sessionStorage.getItem("storecode");
+var storecode = window.name;
 console.log(sessionStorage);
 var list = document.getElementById("line");
 var items = document.getElementsByTagName("li");
