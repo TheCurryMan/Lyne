@@ -145,7 +145,7 @@ function next() {
         console.log(number);
 
         var message = "Dear" + name + ", you are first in line! Please make your way to the register!";
-        makeCorsRequest(number, message);
+        makeCorsRequest(message, number);
     //}
     
 }
