@@ -122,15 +122,15 @@ function notHere() {
         if(items.length>1)
         {
             temp = items[1].cloneNode(true);
-            temp.childNodes[1].innerHTML = items[i].childNodes[1].innerHTML + " ";
-            var index = Math.min(3, items.length);
+            temp.childNodes[1].innerHTML = items[1].childNodes[1].innerHTML + " ";
+            var index = Math.min(4, items.length);
             if(index == items.length)
             {
                 list.appendChild(temp);
             }
             else
             {
-                list.insertBefore(temp, items[i]);
+                list.insertBefore(temp, items[index]);
             }
             var arrayelement = arrayLine[0];
             var firsthalf = arrayLine.splice(0, index);
