@@ -15,5 +15,6 @@ class Line {
     var address: String?
     var eta: Int = 0
     var count: Int = 0
+    var users: [String]?
     
 }

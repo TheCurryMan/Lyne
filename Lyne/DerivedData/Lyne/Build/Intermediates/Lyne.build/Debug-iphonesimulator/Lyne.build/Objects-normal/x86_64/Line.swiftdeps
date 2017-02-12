@@ -7,11 +7,11 @@ provides-member:
 - ["C4Lyne4Line", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "FloatLiteralType"
-- "IntegerLiteralType"
-- "String"
-- "Line"
 - "Int"
+- "Line"
+- "IntegerLiteralType"
+- "FloatLiteralType"
+- "String"
 depends-member:
 - ["Ps9AnyObject", ""]
 - ["Si", "deinit"]
@@ -24,6 +24,7 @@ depends-member:
 - ["C4Lyne4Line", "eta"]
 - ["C4Lyne4Line", "init"]
 - ["C4Lyne4Line", "name"]
+- ["C4Lyne4Line", "users"]
 - ["Sq", "deinit"]
 depends-nominal:
 - "Ps9AnyObject"
@@ -86,4 +87,4 @@ depends-external:
 - "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
 - "/Users/Avinash/Documents/Code/LyneMerced/Lyne/Pods/Firebase/Core/Sources/Firebase.h"
-interface-hash: "39b622c018699c709b7b5e4721b97a46"
+interface-hash: "5afb06801a5a6fca35ceda6d773c5535"

@@ -108,6 +108,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
                 line.code = data["codename"] as! String
                 line.count = data["count"] as! Int
                 line.eta = data["eta"] as! Int
+                line.users = data["Users"] as? [String]
                 line.name = data["name"] as! String
                 self.lines.append(line)
                 self.getUserData()
@@ -118,6 +119,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         searchController.searchResultsUpdater = self
         searchController.dismiss(animated: false, completion: nil)
         tableView.tableHeaderView = searchController.searchBar
+        
     }
     
     
@@ -176,10 +178,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
             let postDict = snapshot.value as? [String : AnyObject] ?? [:]
             if let curString = postDict["lines"] as? [String] {
                 self.curLinesString = curString
-                self.emptyLabel.isHidden = true
+                //self.emptyLabel.isHidden = true
                 self.getCurrentLines()
             } else {
-                self.emptyLabel.isHidden = false
+                //self.emptyLabel.isHidden = false
             }
             
         })
@@ -201,7 +203,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if currentLines.count > 0 {
+        if currentLines.count > 0 || searchController.isActive{
             emptyLabel.isHidden = true
             
         } else {
@@ -247,7 +249,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UISearchBarDe
             }
             
             cell.currentLineName.text = line.name
-            cell.currentLinePosition.text = String(line.count)
+            for (index, element) in line.users!.enumerated() {
+                if UserDefaults.standard.value(forKey: "number") as! String == element {
+                    cell.currentLinePosition.text = String(index+1)
+                }
+            }
+            //cell.currentLinePosition.text = String(line.count)
             cell.backgroundLabel.layer.cornerRadius = 10
             cell.currentLineAddress.text = line.address
             return cell
