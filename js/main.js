@@ -1,5 +1,5 @@
 var arrayLine = [];
-var storecode = sessinoStorage.getItem("storecode")||"PapaJohns345"
+var storecode = sessinoStorage.getItem("storecode");
 var list = document.getElementById("line");
 var items = document.getElementsByTagName("li");
 var buffer = 0;
